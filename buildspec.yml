@@ -1,0 +1,9 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo S3 Copy Started
+      - aws s3 cp index.html s3://web-app-sldfj/ --recursive
+      - echo S3 Copy Completed
+      - echo Build completed on `date`
+      - echo Done
